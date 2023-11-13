@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Barryvdh\DomPDF\ServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
     ])->toArray(),
 
     /*

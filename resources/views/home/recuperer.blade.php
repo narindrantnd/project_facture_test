@@ -138,16 +138,18 @@
                 </div>
             @endif
 
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><button onclick="window.print()" class="btn btn-primary">Imprimer</button></div>
-                <div class="col-md-4"></div>
-                <p></p><br>
-                <p></p><br>
-            </div>
+
 
             </div>
         </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><button onclick="window.print()" class="btn btn-primary">Imprimer</button></div>
+            <div class="col-md-4"></div>
+            <p></p><br>
+            <p></p><br>
         </div>
 
         @include('script')

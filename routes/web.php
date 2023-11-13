@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'about'])->name('app_apropos');
 
 
-Route::get('/facturation', [HomeController::class, 'facturation'])->name('app_facturation');
-
-
-Route::post('/facturation', [HomeController::class, 'recup']);
-
-
-Route::get('/facturation2', [HomeController::class, 'facturation2'])->name('app_facturation2');
+Route::get('/facturation2', [HomeController::class, 'facturation2'])
+        ->middleware('auth')
+        ->name('app_facturation2');
 
 
 Route::post('/facturation2', [HomeController::class, 'recuperer']);
+
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('app_logout');
